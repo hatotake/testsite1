@@ -2,14 +2,175 @@
 body {
   background-image: url(背景@2x.png);
   z-index: 1;
+  position: relative;
+  margin: 0;
+}
+* {
+  cursor: url(box.svg) 30 30, auto;
+}
+p , a , h1 , h2 , h3 , h4 , h5 {
+  font-family: 'ヒラギノ明朝 ProN';
 }
 
-/* header */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a :hover {
+  color: #C9C4B8;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  color: #C9C4B8;
+  font-size: 45px;
+}
+
+h3 {
+  color: #707070;
+  font-size: 28px;
+}
+
+.stop {
+  overflow: hidden
+}
+
+#navArea {
+  position: relative;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url(DSC01543.png);
+  background-position: center;
+  background-size: cover;
+  -webkit-overflow-scrolling: touch;
+  z-index: 11;
+}
+.nav-container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.nav-img img {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  animation-duration: 2s;
+  animation-name: delay;
+}
+@keyframes delay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+nav .inner {
+  width: 80%;
+  padding: 25px;
+}
+nav .inner h1 {
+  font-size: 30px;
+  color: #ffffff;
+  padding-left: 15px;
+  border-bottom: solid #ffffff 1px;
+}
+
+nav .inner ul li a {
+  display: block;
+  color: #ffffff;
+  font-size: 27px;
+  padding: 15px;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li :hover {
+  color: #C9C4B8;
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: absolute;;
+  top: 30px;
+  right: -20px;
+  width: 100px;
+  height: 50px;
+  transition-duration: 0.7s;
+  z-index: 15;
+}
+.clse {
+  display: none;
+  position: absolute;
+  right: 120px;
+  top: -10px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition-duration: 0.7s;
+  transform: scaleX(1);
+}
+.toggle_btn span:nth-child(1) {
+  top: 2px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 15px;
+}
+.toggle_btn:hover .span2 {
+  transform: scaleX(1.5);
+}
+
+.toggle_btn span:nth-child(3) {
+  top: 28px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  transform: scaleX(0);
+  transition-duration: 0.7s;
+}
+.open .toggle_btn span:nth-child(3) {
+  transform: scaleX(0);
+  transition-duration: 0.7s;
+}
+
+
+
+/* Top */
+
 header {
   width: 100%;
 }
 
 .header-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-content {
   width: 112px;
   height: 1080px;
   background-image: url(ヘッダー_アートボード\ 1@2x.png);
@@ -19,7 +180,7 @@ header {
 /* box */
 .box-container {
   position: relative;
-  top: 170px;
+  top: 130px;
 }
 .box {
   display:block;
@@ -62,9 +223,311 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .box-p p {
-  width: 17px;
+  font-family: 'ヒラギノ明朝 ProN';
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 4px;
   font-size: 17px;
 }
+
+/* sns */
+
+.sns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sns img {
+  position: relative;
+  top: 180px;
+  width: auto;
+  height: 20px;
+  margin-bottom: 25px;
+}
+
+.top {
+  width: 100%;
+  height: 1080px;
+  background-image: url(本社2回目_210222_3@2x.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+
+}
+.top img {
+  position: relative;
+  top: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Topここまで */
+
+
+/* News-Blog */
+
+.news-blog {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.news-container {
+  width: 450px;
+}
+.blog-container {
+  width: 590px;
+}
+.news-container p , .blog-container p {
+  width: 100%;
+  color: #F7F7F7;
+  font-size: 17px;
+}
+.news-contents p {
+  border-top: solid 2px #C9C9C9;
+  padding: 30px 0px 5px 0px;
+  margin-bottom: 0px;
+}
+.news-contents p:nth-child(3n) {
+  border-bottom: solid 2px #C9C9C9;
+}
+.news-contents {
+  height: 320px;
+}
+.blog-contents {
+  display: flex;
+  justify-content: space-between;
+  height: 320px;
+}
+.blog-contents img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.blog-contents p {
+  border: solid 1px #C9C9C9;
+  padding: 5px;
+  line-height: 40px;  
+}
+.readmore {
+  width: 100px !important;
+  text-align: center;
+  float: right;
+}
+.readmore1 {
+  border-bottom: solid 3px #0065CE;
+}
+.readmore2 {
+  border-bottom: solid 3px #7C0018;
+}
+
+/* News-Blogここまで */
+
+/* About Us */
+.aboutus-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.aboutus-container h2 , .aboutus-container h3 , .aboutus-container h4 , .aboutus-container h5 {
+  text-align: center;
+}
+.aboutus-container h3 {
+  margin-bottom: 30px;
+}
+.aboutus-contents {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutus-contents h4 , .aboutus-contents h5 , .aboutus-logo img {
+  margin-bottom: 30px;
+}
+.aboutus-contents h4 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+.aboutus-contents h5 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 300;
+}
+.aboutus-movie img {
+  
+}
+.aboutus-logo {
+  width: 100%;
+}
+.aboutus-logo img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.aboutus-readmore {
+  width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  color: #F7F7F7;
+  font-size: 25px;
+  border: solid 1px #707070;
+}
+/* About Us ここまで*/
+
+/* All Works */
+.allworks-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.allworks-container h2 , .allworks-container h3 {
+  text-align: center;
+}
+.allworks-container h3 {
+  margin-bottom: 80px;
+}
+.allworks-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.allworks-contents img {
+  margin-bottom: 10px;
+}
+.allworks-contents p {
+  border: solid 1px #C9C9C9;
+  padding: 5px;
+  line-height: 40px;
+  color: #F7F7F7;
+  font-size: 17px;
+}
+.readmore-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+.border-readmore {
+  width: 240px;
+  text-align: center;
+  color: #F7F7F7;
+  font-size: 25px;
+  border: solid 1px #707070;
+}
+/* All Works ここまで */
+
+/* View */
+.view-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.view-container h2 , .view-container h3 {
+  text-align: center;
+}
+.view-container img {
+  display: block;
+  width: 100%;
+}
+.view-slide p {
+  text-align: center;
+  font-size: 27px;
+  color: #F7F7F7;
+}
+/* View ここまで*/
+
+/* Movie Gallery */
+.movie-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.movie-container h2 , .movie-container h3 {
+  text-align: center;
+}
+.movie-container h3 {
+  margin-bottom: 50px;
+}
+.movie-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+/* Movie Gallery ここまで */
+
+/* Photo Gallery */
+.photo-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.photo-container h2 , .photo-container h3 {
+  text-align: center;
+}
+.photo-contents img {
+  width: 100% !important; 
+  height: auto !important;
+}
+.photo-contents {
+  line-height: 0;
+ 
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         3;
+  column-gap:           10px;
+
+}
+/* Photo Gallery ここまで */
+
+/* footer */
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-top: solid #ffffff 1px;
+  padding-top: 30px;
+}
+.footer-container p {
+  font-size: 16px;
+  color: #ffffff;
+}
+.footer-container iframe {
+  width: 300px;
+  height: 180px;
+}
+.footer-left p:nth-child(3n) {
+  margin-bottom: 20px;
+}
+.footer-left img {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+}
+.footer-left small {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+}
+.footer-right-contents {
+  display: flex;
+}
+.access {
+  text-align: right;
+}
+.googlemap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-container ul li :hover {
+  color: #C9C4B8;
+}
+/* footer ここまで*/
