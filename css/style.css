@@ -2,7 +2,7 @@
 body {
   background-image: url(背景@2x.png);
   background-position: center;
-  background-size: auto;
+  background-size: 100% 20000px;
   z-index: 1;
   position: relative;
   margin: 0;
@@ -10,6 +10,7 @@ body {
 * {
   cursor: url(box.svg) 30 30, auto;
   font-family: 'ヒラギノ明朝 ProN';
+  font-size: 100%;
 }
 
 a {
@@ -46,6 +47,7 @@ h3 {
 
 #navArea {
   position: relative;
+  z-index: 15;
 }
 
 nav {
@@ -87,7 +89,7 @@ nav .inner {
   padding: 25px;
 }
 nav .inner h1 {
-  font-size: 30px;
+  font-size: 3vw;
   color: #ffffff;
   padding-left: 15px;
   border-bottom: solid #ffffff 1px;
@@ -96,7 +98,7 @@ nav .inner h1 {
 nav .inner ul li a {
   display: block;
   color: #ffffff;
-  font-size: 27px;
+  font-size: 2vw;
   padding: 15px;
   text-decoration: none;
   transition-duration: 0.2s;
@@ -109,9 +111,9 @@ nav .inner ul li :hover {
 =============*/
 .toggle_btn {
   display: block;
-  position: absolute;;
+  position: fixed;
   top: 30px;
-  right: -20px;
+  right: -12px;
   width: 100px;
   height: 50px;
   transition-duration: 0.7s;
@@ -173,54 +175,33 @@ header {
 .header-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
+  height: 830px;
+
 }
 
 .header-content {
   width: 112px;
-  height: 1080px;
+  height: 830px;
   background-image: url(ヘッダー_アートボード\ 1@2x.png);
+  background-position: center;
+    background-size: cover;
   margin: 0 0 0 auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 14;
 }
 
 /* box */
 .box-container {
   position: relative;
-  top: 130px;
+  top: 100px;
 }
-.box {
-  display:block;
-  position:relative;
-  margin:0px auto 0;
-  width:30px;
-  height:30px;
-  transform-style:preserve-3d;
-  transform:rotateX(-35deg) rotateY(-45deg); /* ここで四角の角度を調整できる */
-}
-
-.box .item {
-  position:absolute;
-  left:0;
-  right:0;
-  box-sizing:border-box;
-  border:2px solid #ffffff;
-  width:100%;
-  height:100%;
-}
-
-/* 上 */
-.box .item:nth-child(1) {
-  transform:translate3d(0, -15px, 0) rotateX(-90deg);
-}
-
-/* 左 */
-.box .item:nth-child(2) {
-  transform:translate3d(0, 0, 15px);
-}
-
-/* 右 */
-.box .item:nth-child(3) {
-  transform:translate3d(15px, 0, 0) rotateY(90deg);
+.box img {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 .box-p {
@@ -250,7 +231,7 @@ header {
 
 .sns img {
   position: relative;
-  top: 180px;
+  top: 90px;
   width: auto;
   height: 20px;
   margin-bottom: 25px;
@@ -258,8 +239,8 @@ header {
 
 .top {
   width: 100%;
-  height: 1080px;
-  background-image: url(本社2回目_210222_3@2x.png);
+  height: 830px;
+  background-image: url(top_img.png);
   background-size: cover;
   background-position: center;
   z-index: 3;
@@ -270,6 +251,53 @@ header {
   top: 40%;
   display: block;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .header-container {
+    margin-bottom: 0px;
+    height: 550px;
+  }
+  .header-content {
+    width: 60px;
+    height: 550px;
+  }
+  .top {
+    width: 630px;
+    height: 400px;
+    position: relative;
+    top: 90px;
+  }
+  .top img {
+    width: 120px;
+  }
+  .sns {
+    display: none;
+  }
+  .box img {
+    width: 15px;
+  }
+  .box-p p {
+    font-size: 12px;
+  }
+  .toggle_btn {
+    right: -50px;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 4px;
+}
+  .toggle_btn span:nth-child(3) {
+    top: 26px;
+}
+  .toggle_btn span {
+    width: 30px;
+  }
 }
 
 /* Topここまで */
@@ -317,7 +345,6 @@ header {
 }
 .blog-contents p {
   border: solid 1px #C9C9C9;
-  padding: 5px;
   line-height: 40px;  
 }
 .readmore {
@@ -331,7 +358,11 @@ header {
 .readmore2 {
   border-bottom: solid 3px #7C0018;
 }
-
+@media only screen and (max-width: 768px) {
+  .news-container p, .blog-container p {
+    font-size: 13px;
+}
+}
 /* News-Blogここまで */
 
 /* About Us */
@@ -355,17 +386,22 @@ header {
 }
 .small-logo h4 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 2.4vw;
   font-weight: 600;
 
 }
 .small-logo h5 {
   color: #ffffff;
-  font-size: 25px;
+  font-size: 2.5vw;
   font-weight: 300;
 }
+.aboutus-movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .aboutus-movie img {
-  
+  width: 100%;
 }
 .small-logo {
   width: 100%;
@@ -380,7 +416,7 @@ header {
   margin: 0 auto;
   text-align: center;
   color: #F7F7F7;
-  font-size: 25px;
+  font-size: 2.5vw;
   border: solid 1px #707070;
 }
 /* About Us ここまで*/
@@ -404,6 +440,7 @@ header {
 }
 .allworks-contents img {
   margin-bottom: 10px;
+  width: 100%;
 }
 .allworks-contents p {
   border: solid 1px #C9C9C9;
@@ -420,7 +457,7 @@ header {
   width: 240px;
   text-align: center;
   color: #F7F7F7;
-  font-size: 25px;
+  font-size: 2.5vw;
   border: solid 1px #707070;
 }
 /* All Works ここまで */
@@ -461,6 +498,9 @@ header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+}
+.movie-contents img {
+  width: 100%;
 }
 /* Movie Gallery ここまで */
 
@@ -566,7 +606,7 @@ header {
   font-size: 34px;
 }
 .title p {
-  margin-bottom: 50px;
+  margin-bottom: 200px;
 }
 .side-title {
   writing-mode: vertical-rl;
@@ -654,9 +694,9 @@ header {
   margin: 0 auto;
   text-align: center;
   color: #F7F7F7;
-  font-size: 25px;
+  font-size: 2.5vw;
   border: solid 1px #707070;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
 }
 /* All Works page ここまで */
 
@@ -667,7 +707,7 @@ header {
 }
 
 .flow-container > p {
-  font-size: 22px;
+  font-size: 20px;
   color: #F7F7F7;
   text-align: center;
   margin-bottom: 100px;
@@ -687,7 +727,7 @@ header {
 .circle {
   position: relative;
   left: 0px;
-
+  width: 50%;
   margin-left: 50px;
 }
 .circle img {
@@ -708,6 +748,7 @@ header {
   font-size: 33px;
   left: 100px;
   color: #C9C9C9;
+  width: 400px;
 }
 .flow-p3 {
   text-align: left !important;
@@ -744,6 +785,7 @@ header {
   font-size: 25px;
   background-color: #C9C4B8;
   border: solid 1px #707070;
+  padding: 5px 10px;
 }
 /* 360°View page ここまで */
 
@@ -1048,7 +1090,7 @@ header {
 }
 .house-container h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #F7F7F7;
 }
 .house-container img {
@@ -1106,7 +1148,7 @@ header {
   margin-bottom: 100px;
 }
 .trailer-contents1 h2 {
-  font-size: 45px;
+  font-size: 40px;
   color: #F7F7F7;
   text-align: center;
 }
@@ -1137,9 +1179,10 @@ header {
 .catalog-container h2 {
   text-align: center;
   margin-bottom: 200px;
+  font-size: 40px;
 }
 .catalog-p1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #F7F7F7;
   margin: 0 auto;
   width: 80%;
@@ -1163,7 +1206,6 @@ header {
   display: block;
   width: 100%;
   max-width: 90%;
-  height: 220px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
@@ -1193,14 +1235,14 @@ header {
   margin: 0 auto;
 }
 .quote-container {
-  font-size: 20px;
+  font-size: 16px;
   color: #F7F7F7;
   margin: 0 auto;
   margin-bottom: 100px;
 }
 .quote-p {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 .quote-container span {
   color: #FF0031;
@@ -1262,7 +1304,7 @@ width:180px;
   display: block;
 }
 .quote-container-p p {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .quote-container-p {
   margin-bottom: 200px;
@@ -1393,7 +1435,7 @@ width:180px;
   text-align: center;
 }
 .question {
-  font-size: 22px;
+  font-size: 18px;
   color: #707070;
   margin: 0px;
 }
@@ -1411,6 +1453,9 @@ width:180px;
 /* contact ここまで */
 
 /* news */
+.newsside {
+  height: 550px;
+}
 .newspage-container {
   width: 80%;
   margin: 0 auto;
@@ -1434,9 +1479,10 @@ width:180px;
 }
 .newsbox h2 {
   font-size: 30px;
+  color: #fff;
 }
 .news-list li {
-  font-size: 20px;
+  font-size: 18px;
   color: #F7F7F7;
   margin-bottom: 30px;
   border-bottom: solid #C9C4B8 1px;
@@ -1457,7 +1503,7 @@ width:180px;
 }
 .pick {
   color: #F7F7F7;
-  font-size: 22px;
+  font-size: 28px;
   border-left: solid #F7F7F7 5px ;
   padding-left: 10px;
 }
@@ -1479,7 +1525,7 @@ width:180px;
 }
 .cate p {
   font-size: 25px;
-  color: #F7F7F7;
+  color: #C9C4B8;
 }
 /* news　ここまで */
 
@@ -1514,3 +1560,4 @@ width:180px;
   width: 100%;
 }
 /* blogmain ここまで */
+
