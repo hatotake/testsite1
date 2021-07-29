@@ -113,7 +113,7 @@ nav .inner ul li :hover {
   display: block;
   position: fixed;
   top: 30px;
-  right: -12px;
+  right: -25px;
   width: 100px;
   height: 50px;
   transition-duration: 0.7s;
@@ -163,6 +163,34 @@ nav .inner ul li :hover {
   transform: scaleX(0);
   transition-duration: 0.7s;
 }
+@media only screen and (max-width: 768px) {
+  .nav-img {
+    display: none;
+  }
+  .nav-container {
+    top: 50px;
+  }
+  .inner h1 {
+    display: none;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 4vw;
+    text-align: center;
+  }
+  nav .inner ul li a span{
+    display: block;
+    font-size: 12px;
+    text-align: center;
+  }
+  nav .inner ul li a .sla {
+    display: none;
+  }
+  nav .inner {
+    width: 100%;
+  }
+} 
 
 
 
@@ -181,7 +209,7 @@ header {
 }
 
 .header-content {
-  width: 112px;
+  width: 90px;
   height: 830px;
   background-image: url(ヘッダー_アートボード\ 1@2x.png);
   background-position: center;
@@ -314,9 +342,11 @@ header {
 }
 .news-container {
   width: 450px;
+  margin: 10px;
 }
 .blog-container {
   width: 590px;
+  margin: 10px;
 }
 .news-container p , .blog-container p {
   width: 100%;
@@ -361,6 +391,9 @@ header {
 @media only screen and (max-width: 768px) {
   .news-container p, .blog-container p {
     font-size: 13px;
+}
+  .news-contents p {
+  padding: 10px 0px 0px 0px;
 }
 }
 /* News-Blogここまで */
@@ -419,6 +452,11 @@ header {
   font-size: 2.5vw;
   border: solid 1px #707070;
 }
+@media only screen and (max-width: 768px) {
+  .small-logo img {
+    width: 40%;
+  }
+}
 /* About Us ここまで*/
 
 /* All Works */
@@ -439,8 +477,10 @@ header {
   margin-bottom: 30px;
 }
 .allworks-contents img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 10px;
-  width: 100%;
 }
 .allworks-contents p {
   border: solid 1px #C9C9C9;
@@ -448,6 +488,8 @@ header {
   line-height: 40px;
   color: #F7F7F7;
   font-size: 17px;
+  width: 85%;
+  margin: 0 auto;
 }
 .readmore-flex {
   display: flex;
@@ -459,6 +501,19 @@ header {
   color: #F7F7F7;
   font-size: 2.5vw;
   border: solid 1px #707070;
+}
+@media only screen and (max-width: 768px) {
+  .allworks-contents img {
+    height: 150px;
+  }
+.allworks-contents p {
+  padding: 5px;
+  line-height: 20px;
+  font-size: 13px;
+}
+.allworks-contents div {
+  width: 90%;
+}
 }
 /* All Works ここまで */
 
@@ -479,6 +534,11 @@ header {
   text-align: center;
   font-size: 27px;
   color: #F7F7F7;
+}
+@media only screen and (max-width: 768px) {
+.view-slide p {
+  font-size: 15px;
+}
 }
 /* View ここまで*/
 
@@ -502,6 +562,11 @@ header {
 .movie-contents img {
   width: 100%;
 }
+@media only screen and (max-width: 768px) {
+  .movie-contents div {
+    margin: 10px;
+  }
+  }
 /* Movie Gallery ここまで */
 
 /* Photo Gallery */
@@ -548,15 +613,18 @@ header {
   width: 300px;
   height: 180px;
 }
+.footer-left , .footer-center , .footer-right {
+  width: 33%;
+}
 .footer-left p:nth-child(3n) {
   margin-bottom: 20px;
 }
-.footer-left img {
+.footer-left img , .footer-res-1 img  {
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
 }
-.footer-left small {
+.footer-left small , .footer-res-1 small {
   font-size: 12px;
   color: #ffffff;
   text-align: center;
@@ -568,7 +636,7 @@ header {
 .access {
   text-align: right;
 }
-.googlemap {
+.googlemap , .googlemap2 {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -576,6 +644,49 @@ header {
 .footer-container ul li :hover {
   color: #C9C4B8;
 }
+
+.footer-res {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+@media only screen and (min-width: 769px) {
+  .footer-list2 {
+    display: none;
+  }
+  .googlemap2 {
+    display: none;
+  }
+  .footer-res {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-container p {
+    font-size: 12px;
+  }
+  .footer-left img , .footer-res img {
+    width: 40%;
+  }
+  .footer-right-contents {
+    display: block;
+    text-align: right;
+  }
+  .footer-list {
+    display: none;
+  }
+  .googlemap {
+    display: none;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .border-readmore , .aboutus-readmore {
+    width: 120px;
+  }
+  }
 /* footer ここまで*/
 
 /* Provacy Policy */
