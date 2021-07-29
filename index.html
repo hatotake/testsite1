@@ -269,8 +269,8 @@
             <p>CONTAINER HOUSE / コンテナハウス</p>
           </a></li>
       </ul>
-      <a href="index.html"><img src="img/グループ 188.png" alt=""></a>
-      <small>© BOX OF IRON HOUSE. All rights reserved.</small>
+      <div class="footer-logo"><a href="index.html"><img src="img/グループ 188.png" alt=""></a>
+      <small>© BOX OF IRON HOUSE. All rights reserved.</small></div>
     </div>
     <div class="footer-center">
       <ul>
@@ -289,16 +289,26 @@
         <li><a href="view&movie.html">
             <p>360°PHOTO&MOVIE / 360°写真&動画</p>
           </a></li>
-        <li><a href="recruit.html">
-            <p>RECRUTING / 求人情報</p>
-          </a></li>
-        <li><a href="contact.html">
-            <p>CONTACT / お問い合わせ</p>
-          </a></li>
+        <div class="footer-list">
+          <li><a href="recruit.html">
+              <p>RECRUTING / 求人情報</p>
+            </a></li>
+          <li><a href="contact.html">
+              <p>CONTACT / お問い合わせ</p>
+            </a></li>
+        </div>
       </ul>
     </div>
     <div class="footer-right">
       <div class="footer-right-contents">
+        <div class="footer-list2">
+          <li><a href="recruit.html">
+              <p>RECRUTING / 求人情報</p>
+            </a></li>
+          <li><a href="contact.html">
+              <p>CONTACT / お問い合わせ</p>
+            </a></li>
+        </div>
         <div>
           <p>営業日 : 月～金(土日は応相談)</p>
           <p>営業時間 : 9:00～18:00</p>
@@ -312,11 +322,20 @@
       <div class="googlemap">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19152.649530166098!2d139.0894829453363!3d36.35003879032929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601eedc0201c2d25%3A0x2ad78e4065d8c669!2z44CSMzcxLTA4MTQg576k6aas55yM5YmN5qmL5biC5a6u5Zyw55S677yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1626934377203!5m2!1sja!2sjp"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="50%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-
     </div>
 
+  </div>
+
+  <div class="footer-res">
+    <div class="footer-res-1"><a href="index.html"><img src="img/グループ 188.png" alt=""></a>
+      <small>© BOX OF IRON HOUSE. All rights reserved.</small></div>
+    <div class="googlemap2">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19152.649530166098!2d139.0894829453363!3d36.35003879032929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601eedc0201c2d25%3A0x2ad78e4065d8c669!2z44CSMzcxLTA4MTQg576k6aas55yM5YmN5qmL5biC5a6u5Zyw55S677yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1626934377203!5m2!1sja!2sjp"
+        width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </div>
 
 
@@ -415,16 +434,16 @@
       //画像パスの変数を配列に格納
       let srcAry = [png0, png1, png2, png3, png4, png5, png6, png7, png8, png9, png10];
       //リンクを変数に格納
-      let link1 = '<a href="news-blog.html">NEWS & BLOG / 新着情報＆ブログ</a>';
-      let link2 = '<a href="what_box.html">ABOUT US / 会社案内</a>';
-      let link3 = '<a href="container_house.html">CONTAINER HOUSE / コンテナハウス</a>';
-      let link4 = '<a href="privacy_policy.html">TRAILER BOX / トレーラーボックス</a>';
-      let link5 = '<a href="all_works.html">ALL  WORKS / 施工事例</a>';
-      let link6 = '<a href="view&movie.html">360°PHOTO&MOVIE / 360°写真&動画</a>';
-      let link7 = '<a href="web_catalog.html">WEB CATALOG / WEBカタログ</a>';
-      let link8 = '<a href="quote.html">QUOTE / お見積り</a>';
-      let link9 = '<a href="recruit.html">RECRUTING / 求人情報</a>';
-      let link10 = '<a href="contact.html">CONTACT / お問い合わせ</a>';
+      let link1 = '<a href="news-blog.html">NEWS & BLOG <span class="sla">/</span> <span>新着情報＆ブログ</span></a>';
+      let link2 = '<a href="what_box.html">ABOUT US <span class="sla">/</span> <span>会社案内</span></a>';
+      let link3 = '<a href="container_house.html">CONTAINER HOUSE <span class="sla">/</span> <span>コンテナハウス</span></a>';
+      let link4 = '<a href="privacy_policy.html">TRAILER BOX <span class="sla">/</span> <span>トレーラーボックス</span></a>';
+      let link5 = '<a href="all_works.html">ALL  WORKS <span class="sla">/</span> <span>施工事例</span></a>';
+      let link6 = '<a href="view&movie.html">360°PHOTO&MOVIE <span class="sla">/</span> <span>360°写真&動画</span></a>';
+      let link7 = '<a href="web_catalog.html">WEB CATALOG <span class="sla">/</span> <span>WEBカタログ</span></a>';
+      let link8 = '<a href="quote.html">QUOTE <span class="sla">/</span> <span>お見積り</span></a>';
+      let link9 = '<a href="recruit.html">RECRUTING <span class="sla">/</span> <span>求人情報</span></a>';
+      let link10 = '<a href="contact.html">CONTACT <span class="sla">/</span> <span>お問い合わせ</span></a>';
       //リンクの変数を配列に格納
       let linkAry = [link1, link2, link3, link4, link5, link6, link7, link8, link9, link10];
 
