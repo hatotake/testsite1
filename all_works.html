@@ -76,64 +76,59 @@
             </div>
 
         </div>
-
-
-        <div class="header-content">
-
-            <div class="box-container">
-
-                <div class="box">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
-
-                <div class="box-p">
-                    <a href="all_works.html">
-                        <p>施工例</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box-container">
-
-                <div class="box">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
-
-                <div class="box-p">
-                    <a href="quote.html">
-                        <p>簡単お見積り</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box-container">
-
-                <div class="box">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                </div>
-
-                <div class="box-p">
-                    <a href="web_catalog.html">
-                        <p>WEBカタログ</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sns">
-                <img src="img/YouTube (alt)@2x.png" alt="">
-                <img src="img/Instagram@2x.png" alt="">
-                <img src="img/Facebook (alt)@2x.png" alt="">
-                <img src="img/Twitter (alt)@2x.png" alt="">
-            </div>
-
-        </div>
     </div>
+
+    <div class="d">
+        <div class="header-content">
+    
+          <div class="box-container">
+    
+            <div class="box">
+              <img src="img/box@2x.png" alt="">
+            </div>
+    
+            <div class="box-p">
+              <a href="all_works.html">
+                <p>施工例</p>
+              </a>
+            </div>
+          </div>
+    
+          <div class="box-container">
+    
+            <div class="box">
+              <img src="img/box@2x.png" alt="">
+            </div>
+    
+            <div class="box-p">
+              <a href="quote.html">
+                <p>簡単お見積り</p>
+              </a>
+            </div>
+          </div>
+    
+          <div class="box-container">
+    
+            <div class="box">
+              <img src="img/box@2x.png" alt="">
+            </div>
+    
+            <div class="box-p">
+              <a href="web_catalog.html">
+                <p>WEBカタログ</p>
+              </a>
+            </div>
+          </div>
+    
+          <div class="sns">
+            <img src="img/YouTube (alt)@2x.png" alt="">
+            <img src="img/Instagram@2x.png" alt="">
+            <img src="img/Facebook (alt)@2x.png" alt="">
+            <img src="img/Twitter (alt)@2x.png" alt="">
+          </div>
+    
+        </div>
+      </div>
 
     <!-- All Works page -->
 
@@ -337,7 +332,7 @@
         <div class="footer-left">
           <ul>
             <li><a href="news-blog.html"><p>NEWS & BLOG / 新着情報＆ブログ</p></a></li>
-            <li><a href="#"><p>ABOUT US / 会社案内</p></a></li>
+            <li><a href="what_box.html"><p>ABOUT US / 会社案内</p></a></li>
             <li><a href="container_house.html"><p>CONTAINER HOUSE / コンテナハウス</p></a></li>
           </ul>
           <a href="index.html"><img src="img/グループ 188.png" alt=""></a>
@@ -504,6 +499,56 @@
         });
 
     </script>
+
+<script>
+    $(window).on('load scroll resize', function () {
+      var top = $('').height() + 0;
+      var bottom = $('footer').offset().top - 88;
+      var content = $('.d').height() - 0;
+      var scroll = $(window).scrollTop();
+      var x = $(window).width();
+      var min_x = 0;
+      if ((scroll + content) > bottom) {
+        $('.d').css({
+          'position': 'absolute',
+          'top': bottom - content - 0
+        }),
+        $('.toggle_btn').css({
+          'position': 'absolute',
+          'top': bottom - content + 30
+        });
+      } else if (top = scroll) {
+        if (min_x > x) {
+          $('.d').css({
+            'position': 'absolute',
+            'top': 0
+          }),
+          $('.toggle_btn').css({
+            'position': 'absolute',
+            'top': 0
+          });
+        } else {
+          $('.d').css({
+            'position': 'fixed',
+            'top': '0px',
+          }),
+          $('.toggle_btn').css({
+            'position': 'fixed',
+            'top': '30px',
+          });
+        }
+      } else {
+        $('.d').css({
+          'position': 'fixed',
+          'top': top + 0
+        }),
+        $('.toggle_btn').css({
+          'position': 'fixed',
+          'top': top + 30
+        });
+      }
+    });
+  </script>
 
 </body>
 
