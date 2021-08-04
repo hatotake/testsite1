@@ -490,7 +490,6 @@ header {
 }
 
 .header-container {
-  margin-bottom: 300px;
   height: 830px;
 }
 
@@ -776,6 +775,7 @@ header {
   width: 0;
   height: 0;
   border: 1px solid transparent;
+
 }
 
 .a::after {
@@ -786,6 +786,7 @@ header {
   width: 0;
   height: 0;
   border: 1px solid transparent;
+
 }
 
 .a:hover {
@@ -795,6 +796,7 @@ header {
 .a:hover::before {
   width: 100%;
   height: 100%;
+  
   border-top-color: #F7F7F7;
   border-right-color: #F7F7F7;
   transition: width .25s ease-out, height .25s ease-out .25s;
@@ -888,10 +890,6 @@ header {
   border: none;
 }
 
-.awidth {
-  width: 0%;
-}
-
 .a3:hover::after {
   width: 100%;
   border-bottom-color: #7C0018;
@@ -919,6 +917,8 @@ header {
   opacity: 1;
   bottom: 0;
 }
+
+
 
 /* スクロールアップ 　ここまで*/
 
@@ -1002,6 +1002,10 @@ header {
   text-align: center;
   color: #F7F7F7;
   font-size: 2.5vw;
+}
+
+.whatbody .title-container {
+  position: unset;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1316,19 +1320,20 @@ header {
 }
 
 .title p {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .side-title {
   writing-mode: vertical-rl;
   position: absolute;
   left: 0;
+  font-size: 70px;
+  color: #3E3B3B;
+  height: 100%;
 }
 
 .side-title p {
-  font-size: 50px;
-  color: #3E3B3B;
-  height: 100%;
+
 }
 
 .privacy-container {
@@ -1682,6 +1687,7 @@ header {
   font-size: 20px;
   color: #F7F7F7;
   line-height: 40px;
+  margin-bottom: 100px;
 }
 
 .our-slide {
@@ -1694,17 +1700,16 @@ header {
 .reason-container {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .reason-container .title-contents {
   position: relative;
-  background-image: url(背景@2x.png);
-  background-position: center;
-  background-size: auto;
+  background-color: #212937;
   width: 400px;
   margin: 0 auto;
-  top: 110px;
+  top: 180px;
+  z-index: 10;
 }
 
 .reason-contents {
@@ -1761,11 +1766,10 @@ header {
 }
 
 .reason1 h2 {
-  font-size: 35px;
+  font-size: 2.5vw;
   color: #F7F7F7;
   position: relative;
   top: 20px;
-  left: -15px;
   margin-bottom: 10px;
 }
 
@@ -1782,6 +1786,25 @@ header {
   font-size: 20px;
   color: #C9C4B8;
 }
+
+.gallery-item8 , .gallery-item9 {
+  position: relative;
+  /* アニメーションに関数プロパティ */
+  opacity: 0;
+  /* フェードインしたいので最初は非表示 */
+  right: -30px;
+  /* 下から上に移動したいので最初はマイナス値 */
+  transition: 1s;
+  /* 1秒かけてアニメーション */
+}
+
+/* スクロールした時に追加されるclass */
+
+.gallery-item8.fadein2 , .gallery-item9.fadein2{
+  opacity: 1;
+  right: 0;
+}
+
 
 .message-container {
   width: 80%;
@@ -2392,6 +2415,7 @@ header {
   padding: 0px 20px;
   font-size: 18px;
   color: #212020;
+  line-height: 35px;
 }
 
 /* contact ここまで */
@@ -2399,7 +2423,7 @@ header {
 /* news */
 
 .newsside {
-  height: 550px;
+  height: 800px;
 }
 
 .newspage-container {
@@ -2438,7 +2462,7 @@ header {
 }
 
 
-.a4 {
+.a4 , .a5 , .a6 , .a7 , .a8{
   width: 100%;
   position: relative;
   display: block;
@@ -2449,7 +2473,7 @@ header {
   padding: 10px;
 }
 
-.a4::before {
+.a4::before , .a5::before , .a6::before , .a7::before , .a8::before{
   content: '';
   position: absolute;
   top: -1px;
@@ -2459,7 +2483,7 @@ header {
   border: 1px solid transparent;
 }
 
-.a4::after {
+.a4::after , .a5::after , .a6::after , .a7::after , .a8::after{
   content: '';
   position: absolute;
   bottom: -1px;
@@ -2469,10 +2493,14 @@ header {
   border: 1px solid transparent;
 }
 
-.a4:hover::after {
+.a4:hover::after , .a5:hover::after , .a6:hover::after , .a7:hover::after , .a8:hover::after{
   width: 100%;
   border-bottom-color: #C9C4B8;
   transition: border-color 0s ease-out .5s, width .25s ease-out .5s, height .25s ease-out .75s;
+}
+
+.ahover {
+  border: none;
 }
 
 .blogpage-container {
@@ -2588,10 +2616,54 @@ header {
   height: 40px;
 }
 
+.blogmain-p3-p {
+  line-height: 50px;
+  color: #F7F7F7;
+  margin-bottom: 100px;
+}
+
 .blogmain-container img {
   display: block;
   margin: 0 auto;
   width: 100%;
+  margin-bottom: 100px;
+}
+
+.blogmain-container .house-slide img {
+  margin: 10px;
+  margin-bottom: 100px;
 }
 
 /* blogmain ここまで */
+
+
+
+
+#wrap {
+  position:relative;
+  top: -600px;
+  height:300px;
+}
+.object span {
+  z-index:10;
+  position:absolute;
+  -webkit-transition: all 2s ease;/*アニメーションの変化*/
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+.pos0 {
+  top:0px;
+  left:0px;
+}
+.pos1 {
+  top:50px;
+}
+.pos2 {
+  top:100px;
+}
+.pos3 {
+  top:200px;
+}
+
