@@ -41,10 +41,11 @@ h3 {
 }
 
 #contents {
-  opacity: 0;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 7;
+  top: 450px;
 }
 
 #hole {
@@ -82,27 +83,18 @@ h3 {
   transition: all 0.3s ease-out;
 }
 
-.ani {
-  animation-duration: 2s;
+.block {
+  display: block !important;
   animation-name: img;
-  transition-delay: 1s;
+  animation-duration: 1s;
 }
 
-@keyframes img {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.opacity {
+  display: none;
 }
-
-.chenge {
-  animation-duration: 2s;
-  animation-name: img;
-  transition-delay: 1s;
+.chenge_image2 {
+  display: none;
 }
-
 @keyframes img {
   0% {
     opacity: 0;
@@ -343,7 +335,7 @@ nav .inner ul li a {
   display: block;
   color: #ffffff;
   font-size: 22px;
-  padding: 18px;
+  padding: 13px;
   text-decoration: none;
   transition-duration: 0.2s;
 }
@@ -445,7 +437,10 @@ header {
 
 .header-container {
   height: 830px;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
+}
+.allworks ,.header-container {
+  margin-bottom: 0px;
 }
 
 .d {
@@ -560,7 +555,7 @@ header {
 .news-container p, .blog-container p {
   width: 85%;
   color: #F7F7F7;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .blog-container p {
@@ -603,7 +598,7 @@ header {
   transition: 0.5s;
 }
 
-.blog-contents img:hover, .allworks-contents img:hover {
+.blog-contents img:hover, .allworks-contents img:hover,  .photo-contents img:hover {
   transition: 0.7s;
   filter: brightness(70%);
 }
@@ -836,6 +831,7 @@ header {
 
 .small-logo {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .small-logo img {
@@ -880,8 +876,23 @@ header {
   margin-bottom: 30px;
 }
 
+.allworks-contents div {
+  width: 40%;
+  margin: 10px;
+  max-width: 250px;
+}
+
 .allworks-contents img {
-  width: 90%;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.index .allworks-contents img {
+  width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -889,13 +900,21 @@ header {
 
 .allworks-contents p {
   border: solid 1px #C9C9C9;
-  padding: 5px;
   line-height: 40px;
   color: #F7F7F7;
-  font-size: 17px;
-  width: 85%;
+  font-size: 1.1vw;
+  width: 290px;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+.index .allworks-contents p {
+  width: 100%;
+  letter-spacing: 2px;
+  max-width: 250px;
+}
+
+.more {
+  font-size: 17px !important;
 }
 
 .readmore-flex {
@@ -981,6 +1000,7 @@ header {
 .photo-contents img {
   width: 100% !important;
   height: auto !important;
+  margin-bottom: 20px;
 }
 
 .photo-contents {
@@ -989,7 +1009,7 @@ header {
   -webkit-column-gap: 0px;
   -moz-column-count: 5;
   -moz-column-gap: 0px;
-  column-count: 3;
+  column-count: 4;
   column-gap: 10px;
 }
 
@@ -1074,6 +1094,7 @@ header {
   margin: 0 auto;
 }
 
+
 .title-container>a {
   position: relative;
   left: 0;
@@ -1136,7 +1157,7 @@ header {
 .allworkspage-container {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
 .allworkspage-box {
@@ -1147,7 +1168,7 @@ header {
 }
 
 .allworkspage-box div {
-  width: 90%;
+  width: 200px;
   height: 120px;
   background-color: #DFE0E2;
   text-align: center;
@@ -1157,10 +1178,14 @@ header {
 
 .allworkspage-box h3 {
   margin: 0px;
+  font-size: 23px;
 }
 
 .allh3 {
   margin-top: 30px !important;
+}
+.allh3-1 {
+  margin-top: 10px !important;
 }
 
 .allworkspage-box p {
@@ -1219,7 +1244,15 @@ header {
   text-align: center;
   color: #F7F7F7;
   font-size: 2.5vw;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
+}
+.add {
+  display: none;
+}
+.add-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 /* All Works page ここまで */
@@ -1468,10 +1501,14 @@ header {
 }
 
 .our-slide {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.our-slide img {
+  width: 23%;
 }
 
 .reason-container {
@@ -1499,12 +1536,12 @@ header {
 }
 
 .reason-contents .reason-flex:nth-child(n) .reason {
-  padding: 0px 50px;
-  padding-top: 70px;
+  padding: 0px 30px;
+  padding-top: 50px;
 }
 
 .reason-contents .reason-flex:nth-child(2n) .reason {
-  padding: 0px 50px;
+  padding: 0px 30px;
 }
 
 .reason {
@@ -1546,10 +1583,14 @@ header {
   font-size: 2.5vw;
   color: #F7F7F7;
   position: relative;
-  top: 20px;
+  top: 35px;
   margin-bottom: 10px;
 }
 
+.whatbody .reason1 h2 {
+  top: 20px;
+}
+ 
 .reason-p2 {
   font-size: 21px;
   color: #707070;
@@ -1558,10 +1599,18 @@ header {
 
 .reason-p3 {
   position: relative;
-  top: -120px;
-  text-align: center;
+  top: -100px;
   font-size: 20px;
   color: #C9C4B8;
+}
+
+.reason-img img {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  top: -100px;
+  margin: 0 auto;
+  display: block;
 }
 
 .gallery-item8 , .gallery-item9 {
@@ -1758,8 +1807,8 @@ header {
 .housepage-container {
   background-image: url(コルゲート_アートボード\ 1.png);
   background-position: center;
-  background-size: 100%;
-  margin-bottom: 50px;
+  background-size: 50%;
+  margin-bottom: 150px;
 }
 
 .house-contents {
@@ -1772,13 +1821,13 @@ header {
 }
 
 .house-contents .reason1 h2 {
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .house-contents .reason-p3 {
-  top: -90px;
+  top: -70px;
   text-align: left;
-  font-size: 18px;
+  font-size: 1.5vw;
   left: 40px;
 }
 
@@ -2418,7 +2467,7 @@ header {
 
 #wrap {
   position:relative;
-  top: -600px;
+  top: -650px;
   height:300px;
 }
 .object span {
@@ -2532,28 +2581,110 @@ header {
   transform: rotate(-45deg);
 }
 
-@media only screen and (min-width: 1025px) {
-  .sns2 {
-    display: none;
-  }
-  .nav-logo {
-    display: none;
-  }
-  .footer-list2 {
-    display: none;
-  }
-  .googlemap2 {
-    display: none;
-  }
-  .footer-res {
-    display: none;
-  }
+.single {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.single2 {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-/* top 1025 end */
+.single img {
+  width: 200px;
+  display: block;
+  margin: o auto;
+}
+
+.slick-slide img {
+  display: block;
+  margin: 0 auto;
+}
+
+.slider-for img {
+  width: 100% ;
+  height: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+.slider-nav img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+.slider-nav  {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1367px) {
+  .movie-contents img {
+   width: 550px;
+  }
+
+}
 
 @media only screen and (max-width: 1024px) {
-
+  .allworkspage-box h3 {
+    margin: 0px;
+    font-size: 2.5vw;
+  }
+  
+  .allh3 {
+    margin-top: 30px !important;
+  }
+  
+  .allworkspage-box p {
+    font-size: 1vw;
+    color: #C9C4B8;
+    margin-top: 0;
+  }
+  .inner h1 {
+    display: none;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 2.5vw;
+    text-align: center;
+    padding: 8px;
+  }
+  nav .inner ul li a span {
+    display: block;
+    font-size: 1.3vw;
+    text-align: center;
+  }
+  nav .inner ul li a .sla {
+    display: none;
+  }
+  nav .inner {
+    width: 100%;
+  }
+  .nav-logo {
+    display: ;
+  }
+  .clse p {
+    font-size: 15px;
+  }
+  .mask {
+    right: -250px;
+  }
+  .allworks-contents img {
+    width: 200px;
+    height: 200px;
+  }
+  .allworks-contents p {
+    width: 190px;
+    line-height: 20px;
+    font-size: 1.2vw;
+  }
+  .news-contents p {
+    font-size: 1.2vw;
+  }
   .flow-container>p {
     font-size: 2vw;
   }
@@ -2577,8 +2708,52 @@ header {
     left: 70px;
     font-size: 2.4vw;
   }
-  .allworks .header-container {
-    margin-bottom: 300px;
+  
+
+}
+
+@media only screen and (min-width: 771px) {
+  .sns2 {
+    display: none;
+  }
+  .nav-logo {
+    display: none;
+  }
+  .footer-list2 {
+    display: none;
+  }
+  .googlemap2 {
+    display: none;
+  }
+  .footer-res {
+    display: none;
+  }
+}
+
+/* top 1025 end */
+
+@media only screen and (max-width: 770px) {
+  .blog-contents .a {
+    font-size: 1.7vw;
+  }
+  .allworks #wrap {
+    top: -200px;
+  }
+  .side-title {
+    font-size: 7.5vw;
+  }
+  h1 {
+    font-size: 5.5vw;
+  }
+  .title p {
+    font-size: 4.5vw;
+  }
+
+  .title-container > a img {
+    width: 50%;
+  }
+  #contents {
+    top: 300px;
   }
   .allworkspage-box div {
     height: 100px;
@@ -2590,12 +2765,30 @@ header {
     font-size: 15px;
   }
   .allworks-contents img {
-    height: 150px;
+    width: 250px;
+    height: 200px;
+  }
+.index  .allworks-contents img {
+    width: 90%;
+  }
+  .allworks .allworks-contents img {
+    width: 180px;
+    height: 180px;
   }
   .allworks-contents p {
+    width: 240px;
     padding: 5px;
     line-height: 20px;
     font-size: 1.2vw;
+  }
+.index  .allworks-contents p {
+    width: 90%;
+    padding: 5px;
+    line-height: 20px;
+    font-size: 1.2vw;
+  }
+  .allworks .allworks-contents p {
+    width: 170px;
   }
   .allworks-contents div {
     width: 90%;
@@ -2617,7 +2810,7 @@ header {
     font-size: 15px;
   }
   .header-container {
-    margin-bottom: 200px;
+    margin-bottom: 0px;
     height: 550px;
   }
   .header-content {
@@ -2680,36 +2873,7 @@ header {
   .small-logo img {
     width: 30%;
   }
-  .inner h1 {
-    display: none;
-  }
-  nav .inner ul li a {
-    display: block;
-    color: #ffffff;
-    font-size: 2.5vw;
-    text-align: center;
-    padding: 8px;
-  }
-  nav .inner ul li a span {
-    display: block;
-    font-size: 1.3vw;
-    text-align: center;
-  }
-  nav .inner ul li a .sla {
-    display: none;
-  }
-  nav .inner {
-    width: 100%;
-  }
-  .nav-logo {
-    display: ;
-  }
-  .clse p {
-    font-size: 15px;
-  }
-  .mask {
-    right: -250px;
-  }
+
   .footer-container p {
     font-size: 12px;
   }
@@ -2738,14 +2902,17 @@ header {
 }
 /* top 1024 end */
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 376px) {
   .res-logo {
     display: none;
   }
 }
 /* top 601 end */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
+  #contents {
+    top: 250px;
+  }
   .footer-left , .footer-center , .footer-right , .googlemap2 {
     display: none;
   }
@@ -2840,7 +3007,7 @@ header {
     z-index: 15;
   }
   .res-logo img {
-    width: 7%;
+    width: 10%;
   }
   .res-logo div img {
     width: 40%;
@@ -2851,3 +3018,6 @@ header {
 
 }
 /* top 600 end */
+
+@media only screen and (max-width: 375px) {
+}

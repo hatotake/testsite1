@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <title>demo</title>
 
 </head>
@@ -50,13 +52,17 @@
     <div class="house-container">
         <h2>用途は無限大</h2>
         <img src="img/本社2回目_210222_8.png" alt="">
-        <div class="house-slide">
-            <img src="img/コンテナハウス_6.png" alt="">
-            <img src="img/コンテナハウスz3.png" alt="">
-            <img src="img/コンテナハウス_ 1.png" alt="">
-            <img src="img/コンテナハウス_3_アートボード 1.png" alt="">
-        </div>
     </div>
+
+    <div class="single">
+        <div><img src="img/コンテナハウスz3.png" ></div>
+        <div><img src="img/コンテナハウス_3_アートボード 1.png" ></div>
+        <div><img src="img/コンテナハウス_ 1.png" ></div>
+        <div><img src="img/コンテナハウスz3.png" ></div>
+        <div><img src="img/コンテナハウスz3.png" ></div>
+        <div><img src="img/コンテナハウスz3.png" ></div>
+    </div>
+
 
     <div class="housepage-container">
         <div class="house-contents">
@@ -134,7 +140,7 @@
         </div>
     </div>
 
-    <div class="trailer-container">
+    <div class="trailer-container" id="trailer">
         <div class="title-contents">
             <div class="title">
                 <h1 class="gallery-item2">Trailer Box</h1>
@@ -145,12 +151,14 @@
         <div class="trailer-contents1">
             <h2>移動できる強みを活かす</h2>
             <img src="img/トレーラーボックス_1_アートボード 1.png" alt="">
-            <div class="trailer-slide">
-                <img src="img/トレーラーボックス_2.png" alt="">
-                <img src="img/トレーラーコンテナ_2_アートボード 1.png" alt="">
-                <img src="img/トレーラーボックス_4.png" alt="">
-                <img src="img/トレーラーボックス_3.png" alt="">
-            </div>
+        </div>
+        <div class="single single2">
+            <div><img src="img/コンテナハウスz3.png" ></div>
+            <div><img src="img/コンテナハウス_3_アートボード 1.png" ></div>
+            <div><img src="img/コンテナハウス_ 1.png" ></div>
+            <div><img src="img/コンテナハウスz3.png" ></div>
+            <div><img src="img/コンテナハウスz3.png" ></div>
+            <div><img src="img/コンテナハウスz3.png" ></div>
         </div>
     </div>
 
@@ -246,6 +254,11 @@
         </div>
     </div>
 
+
+
+
+
+
     <div id="footer"></div>
 
 
@@ -258,6 +271,17 @@
             $("#footer").load("footer.html");
         });
     </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    $('.single').slick({
+      autoplay: true,
+      slidesToShow: 4
+    }); 
+  });
+  </script>
 
     
 </body>

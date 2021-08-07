@@ -18,7 +18,7 @@
         </div>
         <div class="footer-center">
             <ul>
-                <li><a href="privacy_policy.html">
+                <li><a href="container_house.html#trailer">
                         <p>TRAILER BOX / トレーラーボックス</p>
                     </a></li>
                 <li><a href="web_catalog.html">
@@ -527,154 +527,7 @@
 //]]>
 </script>
 
-<script>
-    $(function () {
-        'use strict';
 
-        const $window = $(window);
-        const $mask = $('.mask');
-        const $img02 = $('.img02');
-        const holeOffsetTop = $('#hole').offset().top;
-        const windowHeight = $window.height();
-        const img01Width = $('.img01').width();
-        const img01Height = $('.img01').height();
-
-        // 画像の高さの何倍のいスクロール量で画像が全て見えるようにするか
-        const ra = 0;
-        // 画像の高さのra分のスクロール量で画像が全てみえる場合の移動スピード
-        const dx = (img01Width + img01Height) / (img01Height * ra)
-
-        $mask.css({
-            // transform: 'translateX(' + (img01Width + img01Height * 0.5) + 'px) skewX(-45deg)',
-            // width: img01Width + img01Height+ 'px',
-            // height: img01Height + 'px'
-            transform: `translateX(${img01Width + img01Height * 0.5}px) skewX(-45deg)`,
-            width: `${img01Width + img01Height}px`,
-            height: `${img01Height}px`
-        });
-        $img02.css({
-            // transform: 'translateX(-' + (img01Width + img01Height * 0.5) + 'px) skewX(45deg)',
-            // width: img01Width + 'px'
-            transform: `translateX(-${img01Width + img01Height * 0.5}px) skewX(45deg)`,
-            width: `${img01Width}px`
-        });
-
-        $window.scroll(function () {
-            const dy = $(this).scrollTop();
-
-            if (dy < holeOffsetTop - windowHeight * 0.5) {
-                $mask.css({
-                    transform: `translateX(${img01Width + img01Height * 0.6}px) skewX(-45deg)`,
-                });
-                $img02.css({
-                    transform: `translateX(-${img01Width + img01Height * 0.6}px) skewX(45deg)`,
-                });
-            } else if ((dy >= holeOffsetTop - windowHeight * 0.5) && (dy < holeOffsetTop - windowHeight * 0.5 + img01Height * ra)) {
-                $mask.css({
-                    // transform: "translateX(" + ((img01Width + img01Height * 0.5) - (dy - (holeOffsetTop - windowHeight * 0.5)) * dx) + "px) skewX(-45deg)"
-                    transform: `translateX(${img01Width + img01Height * 0.5 - (dy - (holeOffsetTop - windowHeight * 0.5)) * dx}px) skewX(-45deg)`
-                });
-                $img02.css({
-                    // transform: "translateX(" + (-(img01Width + img01Height * 0.5) + (dy - (holeOffsetTop - windowHeight * 0.5)) * dx) + "px) skewX(45deg)"
-                    transform: `translateX(${-(img01Width + img01Height * 0.5) + (dy - (holeOffsetTop - windowHeight * 0.5)) * dx}px) skewX(45deg)`
-                });
-            } else {
-                $mask.css({
-                    // transform: 'translateX(-' + img01Height * 0.5 + 'px) skewX(-45deg)'
-                    transform: `translateX(-${img01Height * 0.5}px) skewX(-45deg)`
-                });
-                $img02.css({
-                    // transform: 'translateX(' + img01Height * 0.5 + 'px) skewX(45deg)'
-                    transform: `translateX(${img01Height * 0.5}px) skewX(45deg)`
-                });
-            }
-
-        });
-        $window.trigger('scroll');
-
-    });
-
-</script>
-
-
-<script>
-    $(function () {
-        var timer = false;
-        $(window).resize(function () {
-            if (timer !== false) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function () {
-                location.reload();
-            }, 200);
-        });
-        if (window.matchMedia("(max-width: 1024px)").matches) {
-            $(document).ready(function () {
-                $(window).on("scroll", function () {
-                    scrollHeight = $(document).height();
-                    scrollPosition = $(window).height() + $(window).scrollTop();
-                    footHeight = $("footer").innerHeight() + $(".photo-container").innerHeight() + $(".movie-container").innerHeight() + $(".view-container").innerHeight() + $(".allworks-container").innerHeight() + $(".aboutus-container").innerHeight() + $(".news-blog").innerHeight() + 0;
-
-                    if (scrollHeight - scrollPosition <= footHeight) {
-                        $("#contents").css({
-                            position: "absolute",
-                            bottom: footHeight + 400,
-                            opacity: 1,
-                        });
-
-                    } else {
-                        $("#contents").css({
-                            position: "fixed",
-                            bottom: 500,
-                            opacity: 1,
-                        });
-                    }
-                });
-            });
-        };
-    });
-</script>
-
-<script>
-    $(function () {
-        var timer = false;
-        $(window).resize(function () {
-            if (timer !== false) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function () {
-                location.reload();
-            }, 20);
-        });
-        if (window.matchMedia("(min-width: 1025px)").matches) {
-            $(document).ready(function () {
-                $(window).on("scroll", function () {
-                    scrollHeight = $(document).height();
-                    scrollPosition = $(window).height() + $(window).scrollTop();
-                    if (window.matchMedia("(max-width: 1024px)").matches) {
-                        footHeight = $("footer").innerHeight() + $(".photo-container").innerHeight() + $(".movie-container").innerHeight() + $(".view-container").innerHeight() + $(".allworks-container").innerHeight() + $(".aboutus-container").innerHeight() + $(".news-blog").innerHeight() - 200;
-                    };
-                    footHeight = $("footer").innerHeight() + $(".photo-container").innerHeight() + $(".movie-container").innerHeight() + $(".view-container").innerHeight() + $(".allworks-container").innerHeight() + $(".aboutus-container").innerHeight() + $(".news-blog").innerHeight() + 0;
-
-                    if (scrollHeight - scrollPosition <= footHeight) {
-                        $("#contents").css({
-                            position: "absolute",
-                            bottom: footHeight + 300,
-                            opacity: 1,
-                        });
-
-                    } else {
-                        $("#contents").css({
-                            position: "fixed",
-                            bottom: 345,
-                            opacity: 1,
-                        });
-                    }
-                });
-            });
-        };
-    });
-</script>
 
 
 <script>
@@ -704,3 +557,13 @@
         }
     });
 </script> -->
+
+<script>
+    $(function () {
+        $(".a").click(function () {
+            $(".add").addClass('block');
+        });
+    });
+</script>
+
+
