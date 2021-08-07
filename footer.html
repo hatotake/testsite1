@@ -258,13 +258,23 @@
 
 <!-- メニュー　画像切り替え -->
 <script>
+
+
     $(function () {
         $(".change_btn01").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 2.png");
-            $(".nav-logo-p").addClass('none');
+            $(".chenge_image").fadeOut(1000, function () {
+                $(this).attr('src', 'img/マスクグループ 2.png').on('load', function () {
+                    $(this).fadeIn()
+                })
+            });
+            $(".nav-logo-p").fadeOut(1000);
         }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
+            $(".chenge_image").fadeOut(1000, function () {
+                $(this).attr('src', 'img/グループ 10.png').on('load', function () {
+                    $(this).fadeIn()
+                })
+            });
+            $(".nav-logo-p").fadeIn(1000);
         });
 
         $(".change_btn02").hover(function () {
@@ -561,9 +571,14 @@
 <script>
     $(function () {
         $(".a").click(function () {
+            $(".remo").addClass('none');
             $(".add").addClass('block');
         });
     });
+    $(function () {
+        $(".remo2").click(function () {
+            $(".remo2").addClass('none');
+            $(".add2").addClass('block');
+        });
+    });
 </script>
-
-
