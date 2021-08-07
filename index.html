@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
 
 
@@ -76,7 +78,10 @@
     </div>
   </div>
   
-
+<!--         
+        <a href="#" class="btn02 rotateback"><img src="img/saisei_アートボード 1.png" alt=""><p>
+          <span>PLAY MOVIE</span><span>PLAY MOVIE</span>
+        </p></a> -->
 
 
   <!-- About Us -->
@@ -84,12 +89,7 @@
     <h2 class="gallery-item2">About Us</h2>
     <h3 class="gallery-item2">会社案内</h3>
     <div class="aboutus-contents">
-      <div class="aboutus-movie">
-<!--         
-        <a href="#" class="btn02 rotateback"><img src="img/saisei_アートボード 1.png" alt=""><p>
-          <span>PLAY MOVIE</span><span>PLAY MOVIE</span>
-        </p></a> -->
-      </div>
+      <img src="img/DSC01126.png" alt="">
       <div class="small-logo">
         <img src="img/グループ 13.png" alt="">
         <div>
@@ -113,28 +113,28 @@
     <h3 class="gallery-item3">施工事例</h3>
 
     <div class="allworks-contents">
-      <div>
+      <div class="allnone">
         <img src="img/宮古島写真_201204_12.png" alt="">
-        <p class="a">2021.05.01<br>
-          HPをリニューアル致しました
+        <p class="a">ZUMI terrace 宮古島<br>
+          2020 沖縄県
         </p>
       </div>
       <div>
         <img src="img/練馬2回目_201031_4.png" alt="">
-        <p class="a">2021.05.01<br>
-          HPをリニューアル致しました
+        <p class="a">フリースペース<br>
+          2020 埼玉県
         </p>
       </div>
       <div>
         <img src="img/杉崎撮影_201225_75.png" alt="">
-        <p class="a">2021.05.01<br>
-          HPをリニューアル致しました
+        <p class="a">ZUMI terrace 宮古島<br>
+          2020 沖縄県
         </p>
       </div>
       <div>
         <img src="img/渡辺住建様 引き渡し_200619_0006.png" alt="">
-        <p class="a">2021.05.01<br>
-          HPをリニューアル致しました
+        <p class="a">フリースペース<br>
+          2020 埼玉県
         </p>
       </div>
     </div>
@@ -147,10 +147,26 @@
   <div class="view-container">
     <h2 class="gallery-item4">360°View</h2>
     <h3 class="gallery-item4">360°画像</h3>
-    <img src="img/R0010005.png" alt="">
-    <div class="view-slide">
+    <div class="viewpage-container">
       <p>TSUTSUMI事務所</p>
-    </div>
+
+      <div class="slider-for slf2" style="margin-bottom: 10px;">
+        <figure><img src="img/R0010005.png" /></figure>
+        <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_6.png" /></figure>
+        <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_6.png" /></figure>
+      </div>
+      <div class="slider-nav sln2">
+        <figure><img src="img/R0010005.png" /></figure>
+        <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_6.png" /></figure>
+        <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+        <figure><img src="img/コンテナハウス_6.png" /></figure>
+      </div>
+  </div>
     <div class="readmore-flex">
       <p class="border-readmore"><a href="" class="a">Read more</a></p>
     </div>
@@ -207,7 +223,36 @@
          $("#footer").load("footer.html");
   });
   </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+
+<script type="text/javascript">
+  $(function() {
+    $('.slf2').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.sln2'
+    });  
+    $('.sln2').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slf2',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1340,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    }); 
+});
+</script>
   
 
 </body>

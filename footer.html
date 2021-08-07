@@ -581,4 +581,18 @@
             $(".add2").addClass('block');
         });
     });
+
+    if (window.matchMedia("(max-width: 770px)").matches) {
+        $(function () {
+        $(".remo").click(function () {
+            $(".allworks-contents3").addClass('none');
+        });
+    });
+    $(function () {
+        $(".remo2").click(function () {
+            $(".allworks-contents4").addClass('none');
+        });
+    });
+
+    };
 </script>

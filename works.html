@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  
+  
+  
     <title>demo</title>
 
 </head>
@@ -62,7 +68,25 @@
         </div>
         <div class="works">
             <h4>360°View</h4>
-            <img src="img/宮古島写真_201204_12_2.png" alt="">
+            <div class="viewpage-container">
+        
+              <div class="slider-for slf2" style="margin-bottom: 10px;">
+                <figure><img src="img/R0010005.png" /></figure>
+                <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_6.png" /></figure>
+                <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_6.png" /></figure>
+              </div>
+              <div class="slider-nav sln2">
+                <figure><img src="img/R0010005.png" /></figure>
+                <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_6.png" /></figure>
+                <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+                <figure><img src="img/コンテナハウス_6.png" /></figure>
+              </div>
+          </div>
             <div class="readmore-flex">
                 <p class="border-readmore a">Read more</p>
               </div>
@@ -102,6 +126,29 @@
       });
       </script>
 
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script type="text/javascript">
+  $(function() {
+    $('.slf2').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.sln2'
+    });  
+    $('.sln2').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slf2',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true,
+    }); 
+});
+</script>
 </body>
 
 </html>

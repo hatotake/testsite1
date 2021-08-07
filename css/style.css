@@ -815,6 +815,12 @@ header {
   font-weight: 300;
 }
 
+.aboutus-contents > img {
+  width: 60%;
+  max-width: 750px;
+  height: 400px;
+}
+
 
 .aboutus-movie {
   display: flex;
@@ -879,12 +885,12 @@ header {
 
 .allworks-contents div {
   width: 100%;
-  margin: 10px;
+  max-width: 250px;
 }
 
 .allworks-contents img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 200px;
   display: block;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -903,12 +909,11 @@ header {
   line-height: 40px;
   color: #F7F7F7;
   font-size: 1.1vw;
-  width: 290px;
   margin: 0 auto;
   margin-bottom: 20px;
+  padding: 0px 10px;
 }
 .index .allworks-contents p {
-  width: 100%;
   letter-spacing: 2px;
   max-width: 250px;
 }
@@ -1179,6 +1184,7 @@ header {
 .allworkspage-box h3 {
   margin: 0px;
   font-size: 23px;
+  margin-top: 10px;
 }
 
 .allh3 {
@@ -1190,7 +1196,7 @@ header {
 
 .allworkspage-box p {
   font-size: 15px;
-  color: #C9C4B8;
+  color: #3E3B3B;
   margin-top: 0;
 }
 
@@ -1203,10 +1209,11 @@ header {
 
 .allworkspage-contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .allworkspage-contents .allworks-contents {
+  margin: 10px;
   margin-bottom: 100px;
 }
 
@@ -1327,9 +1334,9 @@ header {
 /* 360°View page */
 
 .viewpage-container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .viewpage-container img {
@@ -1338,6 +1345,8 @@ header {
 }
 
 .viewpage-container>p {
+  width: 80%;
+  margin: 0 auto;
   font-size: 24px;
   color: #F7F7F7;
 }
@@ -1397,7 +1406,7 @@ header {
   margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .moviepage-contents {
@@ -1830,7 +1839,7 @@ header {
 .house-contents .reason-p3 {
   top: -70px;
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   left: 40px;
 }
 
@@ -2640,8 +2649,42 @@ header {
   height: auto;
 }
 
+.slide-for {
+  height: 450px;
+}
 
+.slick-dotted.slick-slider {
+  width: 75%;
+}
 
+.draggable {
+  padding: 0px !important;
+}
+
+.ab1:hover {
+  background-color: #3E3B3B;
+}
+.ab1:hover p{
+  color: #C9C4B8 !important;
+}
+
+.webcatalog .add-container {
+  margin-bottom: 0px;
+}
+.webcatalog .remo2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px !important;
+}
+.slick-prev {
+  left: -30px !important;
+}
+.slick-next {
+  right: -30px;
+}
 
 /* pc */
 
@@ -2656,6 +2699,37 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+  .aboutus-contents > img {
+    margin-top: 100px;
+    max-width: 400px;
+    height: 200px;
+  }
+  .index .allworks-contents div {
+    width: 23%;
+  }
+  .title-contents h1, .title-contents p {
+    font-size: 4vw;
+  }
+  .reason-p2 {
+    font-size: 1.8vw;
+  }
+  .reason1 h2 {
+    font-size: 2.3vw;
+  }
+  .reason1 {
+    top: -100px;
+    left: 100px;
+  }
+  .reason-p1:after {
+    width: 50px;
+    right: 10px;
+  }
+  .reason-p1 {
+    font-size: 25px;
+  }
+  .reason-p3 {
+    width: 250px;
+  }
   .our-container>p {
     font-size: 2vw;
     line-height: 30px;
@@ -2709,7 +2783,6 @@ header {
     height: 200px;
   }
   .allworks-contents p {
-    width: 190px;
     line-height: 20px;
     font-size: 1.2vw;
   }
@@ -2766,6 +2839,7 @@ header {
 
 /* ipad */
 @media only screen and (max-width: 770px) {
+
   .allworks-readmore {
     width: 200px;
   }
@@ -2788,7 +2862,7 @@ header {
           display: flex;
         }
   .allworks-contents3 {
-    display: none;
+    display: none !important;
   }
   .allworkspage-contents-res {
     display: flex;
@@ -2948,7 +3022,7 @@ header {
     display: none;
   }
   .border-readmore, .aboutus-readmore {
-    width: 30%;
+    width: 40%;
   }
   .aboutus-movie {
     height: 200px;
