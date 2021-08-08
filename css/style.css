@@ -2733,6 +2733,16 @@ header {
 /* pc */
 
 @media only screen and (min-width: 1367px) {
+  .allworks-more {
+    top: 0px;
+  }
+  .house-contents .reason-p3 {
+    font-size: 15px;
+  }
+  .house-contents .reason1 h2 {
+    font-size: 25px;
+  }
+  
   .aboutus-movie {
     height: 350px;
   }
