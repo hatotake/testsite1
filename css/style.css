@@ -2985,6 +2985,25 @@ header {
 /* ipad */
 
 @media only screen and (max-width: 770px) {
+  .whatbody .reason1 {
+    left: 170px;
+  }
+  .whatbody .reason1 h2 {
+    top: 12px;
+  }
+  .reason1 h2 {
+    font-size: 3.3vw;
+  }
+  .reason-img img {
+    left: -30px;
+    top: -50px;
+  }
+  .reason-p3 {
+    left: -30px;
+    top: -50px;
+    width: 300px;
+    font-size: 2vw;
+  }
   .blogmain-p3-p {
     line-height: 30px;
     font-size: 2vw;
@@ -3366,6 +3385,26 @@ header {
 /* iphone */
 
 @media only screen and (max-width: 375px) {
+  .whatbody .reason1 {
+    left: 100px !important;
+  }
+  .reason1 h2 {
+    font-size: 4.3vw;
+  }
+  .reason-container .title-contents {
+    width: 200px;
+    top: 150px;
+  }
+  .whatbody .reason1 {
+    left: 115px;
+    top: -70px;
+  }
+  .reason-p1 {
+    left: 0px;
+  }
+  .reason-p3 {
+    width: 200px;
+  }
   .title-contents h1, .title-contents p {
     font-size: 7vw;
   }
