@@ -26,13 +26,12 @@
 
 
     <!-- Top -->
+
+
         <div class="title-container">
             <a href="index.html"><img src="img/logo.png" alt=""></a>
 
             <div class="title-contents">
-                <div class="side-title">
-                    <p>Blog</p>
-                </div>
 
                 <div class="title">
                     <h1>Blog</h1>
@@ -50,6 +49,14 @@
         </div>
     </div>
 
+    <div id="wrap">
+        <div class="object">
+            <span class="pos0">
+                <p class="side-title newsside">Blog
+                </p>
+            </span>
+        </div>
+    </div>
 
     <!-- what page -->
 
@@ -68,7 +75,7 @@
                 </div>
                 <p class="blogmain-p2">前橋市2階建て店舗　完成・引渡し完了です！</p>
             </div>
-            <div class="viewpage-container">
+            <div class="viewpage-container all-res6">
           
                 <div class="slider-for slf2" style="margin-bottom: 10px;">
                   <figure><img src="img/DSC01566.png" /></figure>
@@ -88,6 +95,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="all-res4" style="margin-bottom: 10px;">
+            <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+            <figure><img src="img/コンテナハウス_6.png" /></figure>
+            <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+            <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+          </div>
 
         <div class="blogmain-p3">
             <p class="blogmain-p3-p">
@@ -129,7 +143,30 @@
                     <p class="a">美容室と事務所を完備した２階建て店舗の着工から完成までの動画がYouTubeに投稿されました。</p>
                 </div>
             </div>
+            <div class="allworks-contents card-res">
+                <div>
+                    <img src="img/DSC01566.png" alt="">
+                    <p class="allworks-p">2021.00.00</p>
+                    <p class="a">美容室と事務所を完備した２階建て店舗の着工から完成までの動画がYouTubeに投稿されました。</p>
+                </div>
+            </div>
+        </div>
+        <div class="allworkspage-contents pick-m">
             <div class="allworks-contents">
+                <div>
+                    <img src="img/DSC01566.png" alt="">
+                    <p class="allworks-p">2021.00.00</p>
+                    <p class="a">美容室と事務所を完備した２階建て店舗の着工から完成までの動画がYouTubeに投稿されました。</p>
+                </div>
+            </div>
+            <div class="allworks-contents">
+                <div>
+                    <img src="img/DSC01566.png" alt="">
+                    <p class="allworks-p">2021.00.00</p>
+                    <p class="a">美容室と事務所を完備した２階建て店舗の着工から完成までの動画がYouTubeに投稿されました。</p>
+                </div>
+            </div>
+            <div class="allworks-contents card-res">
                 <div>
                     <img src="img/DSC01566.png" alt="">
                     <p class="allworks-p">2021.00.00</p>
@@ -175,7 +212,7 @@
       asNavFor: '.sln2'
     });  
     $('.sln2').slick({
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.slf2',
       dots: true,
@@ -183,7 +220,7 @@
       focusOnSelect: true,
       responsive: [
         {
-          breakpoint: 1340,
+          breakpoint: 770,
           settings: {
             slidesToShow: 3
           }
@@ -191,6 +228,12 @@
       ]
     }); 
 });
+
+$(function() {
+    $('.all-res4').slick({
+      dots: true,
+    }); 
+  });
 </script>
   
 </body>

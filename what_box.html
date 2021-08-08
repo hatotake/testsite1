@@ -9,6 +9,14 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+
+
+
     <title>demo</title>
 
 </head>
@@ -22,37 +30,37 @@
 
     <!-- Top -->
 
-        <div class="title-container">
-            <a href="index.html"><img src="img/logo.png" alt=""></a>
+    <div class="title-container">
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
 
-            <div class="title-contents">
-                <div class="title">
-                    <h1 class="gallery-item">What’s BOX OF IRON HOUSE</h1>
-                    <p class="gallery-item">BOX OF IRON HOUSEとは?
-                    </p>
-                </div>
-
-                <div class="title">
-
-                    <div class="small-logo gallery-itemlogo">
-                        <img src="img/グループ 13.png" alt="">
-                        <h4>のせる、つなぐ、遊ぶ。<br>
-                            BOXだから自由自在
-                        </h4>
-                    </div>
-                </div>
+        <div class="title-contents">
+            <div class="title">
+                <h1 class="gallery-item">What’s BOX OF IRON HOUSE</h1>
+                <p class="gallery-item">BOX OF IRON HOUSEとは?
+                </p>
             </div>
 
-        </div>
+            <div class="title">
 
-        <div id="wrap">
-            <div class="object">
-                <span class="pos0">
-                    <p class="side-title newsside">What’s BOX OF IRON HOUSE
-                    </p>
-                </span>
+                <div class="small-logo gallery-itemlogo">
+                    <img src="img/グループ 13.png" alt="">
+                    <h4>のせる、つなぐ、遊ぶ。<br>
+                        BOXだから自由自在
+                    </h4>
+                </div>
             </div>
         </div>
+
+    </div>
+
+    <div id="wrap">
+        <div class="object">
+            <span class="pos0">
+                <p class="side-title newsside">What’s BOX OF IRON HOUSE
+                </p>
+            </span>
+        </div>
+    </div>
 
 
     <!-- what page -->
@@ -73,11 +81,14 @@
             「お客様目線」「豊富な経験」「選べる価格」「アフターフォロー」を強みとして<br>
             お客様の思い描く、素敵なコンテナハウスを真心込めて造ります。</p>
 
-        <div class="our-slide">
-            <img src="img/DSC09728.png" alt="">
-            <img src="img/DSC09728.png" alt="">
-            <img src="img/DSC09728.png" alt="">
-            <img src="img/DSC09728.png" alt="">
+
+
+        <div class="sli" style="margin-bottom: 10px;">
+            <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+            <figure><img src="img/コンテナハウス_6.png" /></figure>
+            <figure><img src="img/コンテナハウス_ 1.png" /></figure>
+            <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
+            <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
         </div>
     </div>
 
@@ -395,18 +406,61 @@
 
 
 
-     
+
     <div id="footer"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      //共通パーツ読み込み
-        $(function() {
+        //共通パーツ読み込み
+        $(function () {
             $("#side_menu").load("side_menu.html");
             $("#menu").load("menu.html");
-             $("#footer").load("footer.html");
-      });
-      </script>
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('.sli').slick({
+                autoplay: true,
+                slidesToShow: 4,
+                dots: true,
+
+                responsive: [
+                    {
+                        breakpoint: 770,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }
+                ],
+                responsive: [
+                    {
+                        breakpoint: 375,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ],
+            });
+        });
+
+        $(function () {
+            $('.all-res4').slick({
+                dots: true,
+            });
+        });
+
+        $(function () {
+            $('.all-res5').slick({
+                dots: true,
+            });
+        });
+    </script>
+
 </body>
 
 </html>
