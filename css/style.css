@@ -886,6 +886,7 @@ header {
 .allworks-contents div {
   width: 100%;
   max-width: 330px;
+  margin: 10px;
 }
 
 .allworks-contents img {
@@ -915,7 +916,7 @@ header {
 }
 .index .allworks-contents p {
   letter-spacing: 2px;
-  max-width: 250px;
+  max-width: 330px;
 }
 
 .more {
