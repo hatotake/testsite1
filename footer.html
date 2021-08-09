@@ -18,7 +18,7 @@
         </div>
         <div class="footer-center">
             <ul>
-                <li><a href="container_house.html#trailer">
+                <li><a href="container_house.html">
                         <p>TRAILER BOX / トレーラーボックス</p>
                     </a></li>
                 <li><a href="web_catalog.html">
@@ -259,95 +259,86 @@
 <!-- メニュー　画像切り替え -->
 <script>
 
+$(function () {
+    $(".change_btn01").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 2.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-    $(function () {
-        $(".change_btn01").hover(function () {
-            $(".chenge_image").fadeOut(1000, function () {
-                $(this).attr('src', 'img/マスクグループ 2.png').on('load', function () {
-                    $(this).fadeIn()
-                })
-            });
-            $(".nav-logo-p").fadeOut(1000);
-        }, function () {
-            $(".chenge_image").fadeOut(1000, function () {
-                $(this).attr('src', 'img/グループ 10.png').on('load', function () {
-                    $(this).fadeIn()
-                })
-            });
-            $(".nav-logo-p").fadeIn(1000);
-        });
+    $(".change_btn02").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 3.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn02").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 3.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn03").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 7.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn03").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 7.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn04").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 8.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn04").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 8.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn05").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 9.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn05").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 9.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn06").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 6.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn06").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 6.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn07").hover(function () {
+        $(".chenge_image").attr("src", "img/マスクグループ 10.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn07").hover(function () {
-            $(".chenge_image").attr("src", "img/マスクグループ 10.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn08").hover(function () {
+        $(".chenge_image").attr("src", "img/本社2回目_210222_36.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn08").hover(function () {
-            $(".chenge_image").attr("src", "img/本社2回目_210222_36.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn09").hover(function () {
+        $(".chenge_image").attr("src", "img/DSC01130.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
 
-        $(".change_btn09").hover(function () {
-            $(".chenge_image").attr("src", "img/DSC01130.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
-
-        $(".change_btn10").hover(function () {
-            $(".chenge_image").attr("src", "img/DSC09885.png");
-            $(".nav-logo-p").addClass('none');
-        }, function () {
-            $(".chenge_image").attr("src", "img/グループ 10.png");
-            $(".nav-logo-p").removeClass('none');
-        });
+    $(".change_btn10").hover(function () {
+        $(".chenge_image").attr("src", "img/DSC09885.png");
+        $(".nav-logo-p").addClass('none');
+    }, function () {
+        $(".chenge_image").attr("src", "img/グループ 10.png");
+        $(".nav-logo-p").removeClass('none');
+    });
     });
 </script>
 
@@ -584,15 +575,15 @@
 
     if (window.matchMedia("(max-width: 770px)").matches) {
         $(function () {
-        $(".remo").click(function () {
-            $(".allworks-contents3").addClass('none');
+            $(".remo").click(function () {
+                $(".allworks-contents3").addClass('none');
+            });
         });
-    });
-    $(function () {
-        $(".remo2").click(function () {
-            $(".allworks-contents4").addClass('none');
+        $(function () {
+            $(".remo2").click(function () {
+                $(".allworks-contents4").addClass('none');
+            });
         });
-    });
 
     };
 </script>

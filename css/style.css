@@ -245,7 +245,7 @@ h3 {
   z-index: 20;
   text-align: center;
   color: #F7F7F7;
-  font-size: 3vw;
+  font-size: 2vw;
   margin: 0 auto;
 }
 
@@ -339,7 +339,7 @@ nav .inner ul li a {
   display: block;
   color: #ffffff;
   font-size: 22px;
-  padding: 13px;
+  padding: 10px;
   text-decoration: none;
   transition-duration: 0.2s;
 }
@@ -544,12 +544,12 @@ header {
 }
 
 .news-container {
-  width: 450px;
+  width: 50%;
   margin: 10px;
 }
 
 .blog-container {
-  width: 590px;
+  width: 50%;
   margin: 10px;
 }
 
@@ -801,13 +801,13 @@ header {
 
 .small-logo h4 {
   color: #ffffff;
-  font-size: 2.4vw;
+  font-size: 2vw;
   font-weight: 600;
 }
 
 .small-logo h5 {
   color: #ffffff;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 300;
 }
 
@@ -2777,6 +2777,9 @@ header {
 .aw {
   width: 90%;
 }
+.allworkspage-container {
+  margin-bottom: 0px;
+}
 
 /* pc */
 
@@ -2898,7 +2901,7 @@ header {
     color: #ffffff;
     font-size: 2.5vw;
     text-align: center;
-    padding: 8px;
+    padding: 5px;
   }
   nav .inner ul li a span {
     display: block;
@@ -2910,6 +2913,7 @@ header {
   }
   nav .inner {
     width: 100%;
+    margin-top: 50px
   }
   .nav-logo {
     display: ;
@@ -2985,6 +2989,18 @@ header {
 /* ipad */
 
 @media only screen and (max-width: 770px) {
+  .blog-contents {
+    height: 220px;
+  }
+  .news-contents {
+    height: 220px;
+  }
+  .news-container {
+    margin: 0px;
+  }
+  .blog-contents div {
+    margin: 3px;
+  }
   .whatbody .reason1 {
     left: 170px;
   }
