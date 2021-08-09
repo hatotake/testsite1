@@ -59,7 +59,7 @@
   <!-- works page -->
   <div class="workspage-container">
     <div class="works">
-      <h4>Works</h4>
+      <h4>Movie</h4>
       <img src="img/宮古島写真_201204_32.png" alt="">
       <div class="readmore-flex">
         <p class="border-readmore a">Read more</p>
@@ -67,38 +67,31 @@
     </div>
     <div class="works">
       <h4>360°View</h4>
-      <div class="viewpage-container all-res6">
-
-        <div class="slider-for slf2" style="margin-bottom: 10px;">
-          <figure><img src="img/R0010005.png" /></figure>
-          <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_6.png" /></figure>
-          <figure><img src="img/コンテナハウス_ 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_6.png" /></figure>
-        </div>
-        <div class="slider-nav sln2">
-          <figure><img src="img/R0010005.png" /></figure>
-          <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_6.png" /></figure>
-          <figure><img src="img/コンテナハウス_ 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-          <figure><img src="img/コンテナハウス_6.png" /></figure>
+      <div class="viewpage-container">
+  
+        <div id="wrap wrap1">
+          <ul id="slider2">
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像">
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="slide-item"><img src="img/R0010005.png" alt="画像"></li>
+          </ul>
+          <ul id="thumbnail_slider2">
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+            <li class="thumbnail-item"><img src="img/R0010005.png" alt="画像"></li>
+          </ul>
         </div>
       </div>
       <div class="readmore-flex">
         <p class="border-readmore a">Read more</p>
       </div>
     </div>
-
-
-    <div class="all-res4" style="margin-bottom: 10px;">
-      <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-      <figure><img src="img/コンテナハウス_6.png" /></figure>
-      <figure><img src="img/コンテナハウス_ 1.png" /></figure>
-      <figure><img src="img/コンテナハウス_3_アートボード 1.png" /></figure>
-    </div>
-
 
     <div class="works">
       <h4>Photo Gallery</h4>
@@ -119,8 +112,25 @@
         <img src="img/宮古島写真_201204_92.png" alt="">
       </div>
 
+      <div class="viewpage-container no">
+
+        <div id="wrap1">
+          <ul id="slider3">
+            <li><img src="img/塗装後２-3.jpg" alt="" id="photo1"></li>
+            <li><img src="img/塗装後２-8.jpg" alt="" id="photo2"></li>
+            <li><img src="img/塗装後２.jpg" alt="" id="photo3"></li>
+            <li><img src="img/3-01.jpg" alt="" id="photo4"></li>
+            <li><img src="img/3-07.jpg" alt="" id="photo5"></li>
+            <li><img src="img/名称未設定-01.jpg" alt="" id="photo6"></li>
+            <li><img src="img/名称未設定-07.jpg" alt="" id="photo7"></li>
+            <li><img src="img/名称未設定-08.jpg" alt="" id="photo8"></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
+
 
 
   <div id="footer"></div>
@@ -171,6 +181,94 @@
       dots: true,
     }); 
   });
+
+  $(function () {
+      var mainSlider = "#slider"; //メインスライダーid
+      var thumbnailSlider = "#thumbnail_slider"; //サムネイルスライダーid
+
+      $(mainSlider).slick({
+        autoplay: true,
+        speed: 1000,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 770,
+            settings: {
+              arrows: true,
+              dots: true,
+            }
+          }
+        ]
+      });
+
+      //#thumbnail_sliderでクリックしたスライドをカレントにする
+      $(thumbnailSlider + " .slick-slide").on('click', function () {
+        var index = $(this).attr("data-slick-index");
+        $(thumbnailSlider).slick("slickGoTo", index, false);
+      });
+    });
+
+    $(function () {
+      var mainSlider = "#slider2"; //メインスライダーid
+      var thumbnailSlider = "#thumbnail_slider2"; //サムネイルスライダーid
+
+      $(mainSlider).slick({
+        autoplay: true,
+        speed: 1000,
+        arrows: false,
+        asNavFor: thumbnailSlider,
+        responsive: [
+          {
+            breakpoint: 770,
+            settings: {
+              arrows: true,
+              dots: true,
+            }
+          }
+        ]
+      });
+      $(thumbnailSlider).slick({
+        slidesToShow: 3,
+        arrows: true,
+        speed: 1000,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        asNavFor: mainSlider
+      });
+      //#thumbnail_sliderでクリックしたスライドをカレントにする
+      $(thumbnailSlider + " .slick-slide").on('click', function () {
+        var index = $(this).attr("data-slick-index");
+        $(thumbnailSlider).slick("slickGoTo", index, false);
+      });
+    });
+
+    $(function () {
+      var mainSlider = "#slider3"; //メインスライダーid
+      var thumbnailSlider = "#thumbnail_slider3"; //サムネイルスライダーid
+
+      $(mainSlider).slick({
+        autoplay: true,
+        speed: 1000,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 770,
+            settings: {
+              arrows: true,
+              dots: true,
+            }
+          }
+        ]
+      });
+
+      //#thumbnail_sliderでクリックしたスライドをカレントにする
+      $(thumbnailSlider + " .slick-slide").on('click', function () {
+        var index = $(this).attr("data-slick-index");
+        $(thumbnailSlider).slick("slickGoTo", index, false);
+      });
+    });
+
 
   </script>
 </body>
